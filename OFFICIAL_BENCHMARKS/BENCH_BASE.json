@@ -1,0 +1,808 @@
+{
+  "schema": "anticloud.tier-bench/1",
+  "project": "SEAMLY2D",
+  "source": {
+    "repo_path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\CLOTHING_MANUFACTURING\\SEAMLY2D\\UPSTREAM_CLONE",
+    "git": {
+      "head": "0627ac315f7b9aae6109e0961a59b98852e7aae0",
+      "url": "https://github.com/FashionFreedom/Seamly2D.git",
+      "branch": "develop",
+      "committed_at": "2026-09-08T10:14:58+02:00"
+    }
+  },
+  "metrics": {
+    "files_total": 1882,
+    "source_files_scanned": 811,
+    "lines_of_code": 807950,
+    "languages": {
+      ".png": 554,
+      ".h": 400,
+      ".cpp": 336,
+      ".svg": 226,
+      ".ui": 80,
+      ".ts": 67,
+      ".xsd": 64,
+      ".pri": 42,
+      ".pro": 21,
+      ".md": 18,
+      ".wav": 18,
+      "(none)": 10,
+      ".qrc": 10,
+      ".yml": 8,
+      ".txt": 5
+    }
+  },
+  "licence": {
+    "spdx": "GPL-3.0",
+    "class": "B",
+    "source_file": "LICENSE",
+    "redistribution_allowed": false
+  },
+  "dependencies": {
+    "count": 0,
+    "unique": 0,
+    "by_ecosystem": {},
+    "list": []
+  },
+  "owasp_top10": {
+    "total_findings": 862,
+    "files_with_findings": 766,
+    "severity": {
+      "high": 13,
+      "medium": 0,
+      "low": 849
+    },
+    "categories": {
+      "A01-BrokenAccessControl": {
+        "count": 0,
+        "findings": []
+      },
+      "A02-CryptographicFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A03-Injection": {
+        "count": 13,
+        "findings": [
+          {
+            "severity": "high",
+            "file": "src/app/seamly2d/mainwindow.cpp",
+            "line": 3104,
+            "cwe": "CWE-95",
+            "snippet": "QAction *selectedAction = menu.exec(QCursor::pos());"
+          },
+          {
+            "severity": "high",
+            "file": "src/app/seamly2d/dialogs/dialogpatternproperties.cpp",
+            "line": 796,
+            "cwe": "CWE-95",
+            "snippet": "menu.exec(QCursor::pos());"
+          },
+          {
+            "severity": "high",
+            "file": "src/app/seamly2d/dialogs/groups_widget.cpp",
+            "line": 547,
+            "cwe": "CWE-95",
+            "snippet": "QAction *selectedAction = menu->exec(ui->groups_table_widget->viewport()->mapToGlobal(pos));"
+          },
+          {
+            "severity": "high",
+            "file": "src/app/seamly2d/dialogs/pieces_widget.cpp",
+            "line": 585,
+            "cwe": "CWE-95",
+            "snippet": "QAction *selectedAction = menu->exec(ui->tableWidget->viewport()->mapToGlobal(pos));"
+          },
+          {
+            "severity": "high",
+            "file": "src/app/seamlyme/dialogs/database_dialog.cpp",
+            "line": 463,
+            "cwe": "CWE-95",
+            "snippet": "menu.exec(ui->treeWidget->mapToGlobal(pos));"
+          },
+          {
+            "severity": "high",
+            "file": "src/libs/tools/images/image_item.cpp",
+            "line": 396,
+            "cwe": "CWE-95",
+            "snippet": "QAction *selectedAction = menu.exec(event->screenPos());"
+          },
+          {
+            "severity": "high",
+            "file": "src/libs/vtools/dialogs/support/edit_formula_dialog.cpp",
+            "line": 378,
+            "cwe": "CWE-89",
+            "snippet": "/// @param rotation additional string used to insert +- 90 or 180 degs from an angle variable string."
+          },
+          {
+            "severity": "high",
+            "file": "src/libs/vtools/dialogs/tools/insert_nodes_dialog.cpp",
+            "line": 341,
+            "cwe": "CWE-95",
+            "snippet": "QAction *selectedAction = menu->exec(ui->nodes_ListWidget->viewport()->mapToGlobal(pos));"
+          },
+          {
+            "severity": "high",
+            "file": "src/libs/vtools/dialogs/tools/piece/internal_path_dialog.cpp",
+            "line": 304,
+            "cwe": "CWE-95",
+            "snippet": "QAction *selectedAction = menu->exec(ui->listWidget->viewport()->mapToGlobal(pos));"
+          },
+          {
+            "severity": "high",
+            "file": "src/libs/vtools/dialogs/tools/piece/pattern_piece_dialog.cpp",
+            "line": 948,
+            "cwe": "CWE-95",
+            "snippet": "QAction *selectedAction = menu->exec(ui->mainPath_ListWidget->viewport()->mapToGlobal(pos));"
+          },
+          {
+            "severity": "high",
+            "file": "src/libs/vtools/tools/pattern_piece_tool.cpp",
+            "line": 1217,
+            "cwe": "CWE-95",
+            "snippet": "QAction *selectedAction = menu.exec(event->screenPos());"
+          },
+          {
+            "severity": "high",
+            "file": "src/libs/vtools/tools/drawTools/vdrawtool.h",
+            "line": 349,
+            "cwe": "CWE-95",
+            "snippet": "QAction *selectedAction = menu.exec(event->screenPos());"
+          },
+          {
+            "severity": "high",
+            "file": "src/libs/vtools/tools/nodeDetails/vnodepoint.cpp",
+            "line": 496,
+            "cwe": "CWE-95",
+            "snippet": "QAction *selectedAction = menu.exec(event->screenPos());"
+          }
+        ]
+      },
+      "A04-InsecureDesign": {
+        "count": 85,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "share/translations/qtbase_es_ES.ts",
+            "line": 1724,
+            "cwe": "CWE-",
+            "snippet": "<translation>N&amp;o a todo</translation>"
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/seamly2d_cs_CZ.ts",
+            "line": 9723,
+            "cwe": "CWE-",
+            "snippet": "<source>Can&apos;t convert toDouble parameter</source>"
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/seamly2d_de_DE.ts",
+            "line": 9709,
+            "cwe": "CWE-",
+            "snippet": "<source>Can&apos;t convert toDouble parameter</source>"
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/seamly2d_el_GR.ts",
+            "line": 9727,
+            "cwe": "CWE-",
+            "snippet": "<source>Can&apos;t convert toDouble parameter</source>"
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/seamly2d_en_CA.ts",
+            "line": 9693,
+            "cwe": "CWE-",
+            "snippet": "<source>Can&apos;t convert toDouble parameter</source>"
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/seamly2d_en_GB.ts",
+            "line": 9693,
+            "cwe": "CWE-",
+            "snippet": "<source>Can&apos;t convert toDouble parameter</source>"
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/seamly2d_en_IN.ts",
+            "line": 9693,
+            "cwe": "CWE-",
+            "snippet": "<source>Can&apos;t convert toDouble parameter</source>"
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/seamly2d_en_US.ts",
+            "line": 9708,
+            "cwe": "CWE-",
+            "snippet": "<source>Can&apos;t convert toDouble parameter</source>"
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/seamly2d_es_ES.ts",
+            "line": 434,
+            "cwe": "CWE-",
+            "snippet": "<translation>Limpiar todo</translation>"
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/seamly2d_fi_FI.ts",
+            "line": 9725,
+            "cwe": "CWE-",
+            "snippet": "<source>Can&apos;t convert toDouble parameter</source>"
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/seamly2d_fr_FR.ts",
+            "line": 9751,
+            "cwe": "CWE-",
+            "snippet": "<source>Can&apos;t convert toDouble parameter</source>"
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/seamly2d_he_IL.ts",
+            "line": 9689,
+            "cwe": "CWE-",
+            "snippet": "<source>Can&apos;t convert toDouble parameter</source>"
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/seamly2d_hu_HU.ts",
+            "line": 9742,
+            "cwe": "CWE-",
+            "snippet": "<source>Can&apos;t convert toDouble parameter</source>"
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/seamly2d_id_ID.ts",
+            "line": 9725,
+            "cwe": "CWE-",
+            "snippet": "<source>Can&apos;t convert toDouble parameter</source>"
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/seamly2d_it_IT.ts",
+            "line": 5778,
+            "cwe": "CWE-",
+            "snippet": "<translation>Il metodo %1 non fa nulla in modalit\u00e0 GUI</translation>"
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/seamly2d_nl_NL.ts",
+            "line": 9708,
+            "cwe": "CWE-",
+            "snippet": "<source>Can&apos;t convert toDouble parameter</source>"
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/seamly2d_pl_PL.ts",
+            "line": 9743,
+            "cwe": "CWE-",
+            "snippet": "<source>Can&apos;t convert toDouble parameter</source>"
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/seamly2d_pt_BR.ts",
+            "line": 2140,
+            "cwe": "CWE-",
+            "snippet": "<translation>Todos os tamanhos (cm)</translation>"
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/seamly2d_ro_RO.ts",
+            "line": 9727,
+            "cwe": "CWE-",
+            "snippet": "<source>Can&apos;t convert toDouble parameter</source>"
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/seamly2d_ru_RU.ts",
+            "line": 9732,
+            "cwe": "CWE-",
+            "snippet": "<source>Can&apos;t convert toDouble parameter</source>"
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/seamly2d_tr_TR.ts",
+            "line": 9725,
+            "cwe": "CWE-",
+            "snippet": "<source>Can&apos;t convert toDouble parameter</source>"
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/seamly2d_uk_UA.ts",
+            "line": 9726,
+            "cwe": "CWE-",
+            "snippet": "<source>Can&apos;t convert toDouble parameter</source>"
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/seamly2d_zh_CN.ts",
+            "line": 9725,
+            "cwe": "CWE-",
+            "snippet": "<source>Can&apos;t convert toDouble parameter</source>"
+          },
+          {
+            "severity": "low",
+            "file": "src/app/seamly2d/mainwindow.cpp",
+            "line": 2998,
+            "cwe": "CWE-",
+            "snippet": "// TODO: Need to make this work with operation's and dart tools"
+          },
+          {
+            "severity": "low",
+            "file": "src/app/seamly2d/core/application_2d.cpp",
+            "line": 205,
+            "cwe": "CWE-",
+            "snippet": "// fixme: trying to make sure that no save/load dialogs are opened, because an error message"
+          }
+        ]
+      },
+      "A05-SecurityMisconfiguration": {
+        "count": 0,
+        "findings": []
+      },
+      "A06-VulnerableComponents": {
+        "count": 0,
+        "findings": []
+      },
+      "A07-AuthFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A08-SoftwareDataIntegrity": {
+        "count": 764,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "scripts/fix_png.sh",
+            "line": 7,
+            "cwe": "CWE-319",
+            "snippet": "# Link: http://pmt.sourceforge.net/pngcrush/"
+          },
+          {
+            "severity": "low",
+            "file": "scripts/translations/auto_translate_ts.py",
+            "line": 26,
+            "cwe": "CWE-319",
+            "snippet": "#  along with Seamly2D.  If not, see <http://www.gnu.org/licenses/>."
+          },
+          {
+            "severity": "low",
+            "file": "scripts/translations/create_new_ts.py",
+            "line": 27,
+            "cwe": "CWE-319",
+            "snippet": "#  along with Seamly2D.  If not, see <http://www.gnu.org/licenses/>."
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/qtbase_ar_AR.ts",
+            "line": 6054,
+            "cwe": "CWE-319",
+            "snippet": "<source>&lt;p&gt;Qt is a C++ toolkit for cross-platform application development.&lt;/p&gt;&lt;p&gt;Qt provides single-source portability across all major desktop operating systems."
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/qtbase_cs_CZ.ts",
+            "line": 2053,
+            "cwe": "CWE-319",
+            "snippet": "<source>&lt;p&gt;Qt is a C++ toolkit for cross-platform application development.&lt;/p&gt;&lt;p&gt;Qt provides single-source portability across all major desktop operating systems."
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/qtbase_de_DE.ts",
+            "line": 6623,
+            "cwe": "CWE-319",
+            "snippet": "<source>&lt;p&gt;Qt is a C++ toolkit for cross-platform application development.&lt;/p&gt;&lt;p&gt;Qt provides single-source portability across all major desktop operating systems."
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/qtbase_el_GR.ts",
+            "line": 6603,
+            "cwe": "CWE-319",
+            "snippet": "<source>&lt;p&gt;Qt is a C++ toolkit for cross-platform application development.&lt;/p&gt;&lt;p&gt;Qt provides single-source portability across all major desktop operating systems."
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/qtbase_en_CA.ts",
+            "line": 6603,
+            "cwe": "CWE-319",
+            "snippet": "<source>&lt;p&gt;Qt is a C++ toolkit for cross-platform application development.&lt;/p&gt;&lt;p&gt;Qt provides single-source portability across all major desktop operating systems."
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/qtbase_en_GB.ts",
+            "line": 6603,
+            "cwe": "CWE-319",
+            "snippet": "<source>&lt;p&gt;Qt is a C++ toolkit for cross-platform application development.&lt;/p&gt;&lt;p&gt;Qt provides single-source portability across all major desktop operating systems."
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/qtbase_en_IN.ts",
+            "line": 6603,
+            "cwe": "CWE-319",
+            "snippet": "<source>&lt;p&gt;Qt is a C++ toolkit for cross-platform application development.&lt;/p&gt;&lt;p&gt;Qt provides single-source portability across all major desktop operating systems."
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/qtbase_en_US.ts",
+            "line": 6603,
+            "cwe": "CWE-319",
+            "snippet": "<source>&lt;p&gt;Qt is a C++ toolkit for cross-platform application development.&lt;/p&gt;&lt;p&gt;Qt provides single-source portability across all major desktop operating systems."
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/qtbase_es_ES.ts",
+            "line": 1648,
+            "cwe": "CWE-319",
+            "snippet": "<source>&lt;p&gt;Qt is a C++ toolkit for cross-platform application development.&lt;/p&gt;&lt;p&gt;Qt provides single-source portability across all major desktop operating systems."
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/qtbase_fi_FI.ts",
+            "line": 6128,
+            "cwe": "CWE-319",
+            "snippet": "<source>&lt;p&gt;Qt is a C++ toolkit for cross-platform application development.&lt;/p&gt;&lt;p&gt;Qt provides single-source portability across all major desktop operating systems."
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/qtbase_fr_FR.ts",
+            "line": 1648,
+            "cwe": "CWE-319",
+            "snippet": "<source>&lt;p&gt;Qt is a C++ toolkit for cross-platform application development.&lt;/p&gt;&lt;p&gt;Qt provides single-source portability across all major desktop operating systems."
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/qtbase_he_IL.ts",
+            "line": 1648,
+            "cwe": "CWE-319",
+            "snippet": "<source>&lt;p&gt;Qt is a C++ toolkit for cross-platform application development.&lt;/p&gt;&lt;p&gt;Qt provides single-source portability across all major desktop operating systems."
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/qtbase_hu_HU.ts",
+            "line": 1648,
+            "cwe": "CWE-319",
+            "snippet": "<source>&lt;p&gt;Qt is a C++ toolkit for cross-platform application development.&lt;/p&gt;&lt;p&gt;Qt provides single-source portability across all major desktop operating systems."
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/qtbase_id_ID.ts",
+            "line": 6623,
+            "cwe": "CWE-319",
+            "snippet": "<source>&lt;p&gt;Qt is a C++ toolkit for cross-platform application development.&lt;/p&gt;&lt;p&gt;Qt provides single-source portability across all major desktop operating systems."
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/qtbase_it_IT.ts",
+            "line": 1624,
+            "cwe": "CWE-319",
+            "snippet": "<source>&lt;p&gt;Qt is a C++ toolkit for cross-platform application development.&lt;/p&gt;&lt;p&gt;Qt provides single-source portability across all major desktop operating systems."
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/qtbase_nl_NL.ts",
+            "line": 6604,
+            "cwe": "CWE-319",
+            "snippet": "<source>&lt;p&gt;Qt is a C++ toolkit for cross-platform application development.&lt;/p&gt;&lt;p&gt;Qt provides single-source portability across all major desktop operating systems."
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/qtbase_pt_BR.ts",
+            "line": 6603,
+            "cwe": "CWE-319",
+            "snippet": "<source>&lt;p&gt;Qt is a C++ toolkit for cross-platform application development.&lt;/p&gt;&lt;p&gt;Qt provides single-source portability across all major desktop operating systems."
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/qtbase_ro_RO.ts",
+            "line": 6603,
+            "cwe": "CWE-319",
+            "snippet": "<source>&lt;p&gt;Qt is a C++ toolkit for cross-platform application development.&lt;/p&gt;&lt;p&gt;Qt provides single-source portability across all major desktop operating systems."
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/qtbase_ru_RU.ts",
+            "line": 6624,
+            "cwe": "CWE-319",
+            "snippet": "<source>&lt;p&gt;Qt is a C++ toolkit for cross-platform application development.&lt;/p&gt;&lt;p&gt;Qt provides single-source portability across all major desktop operating systems."
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/qtbase_tr_TR.ts",
+            "line": 2555,
+            "cwe": "CWE-319",
+            "snippet": "<source>&lt;p&gt;Qt is a C++ toolkit for cross-platform application development.&lt;/p&gt;&lt;p&gt;Qt provides single-source portability across all major desktop operating systems."
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/qtbase_uk_UA.ts",
+            "line": 1644,
+            "cwe": "CWE-319",
+            "snippet": "<source>&lt;p&gt;Qt is a C++ toolkit for cross-platform application development.&lt;/p&gt;&lt;p&gt;Qt provides single-source portability across all major desktop operating systems."
+          },
+          {
+            "severity": "low",
+            "file": "share/translations/qtbase_zh_CN.ts",
+            "line": 6270,
+            "cwe": "CWE-319",
+            "snippet": "<source>&lt;p&gt;Qt is a C++ toolkit for cross-platform application development.&lt;/p&gt;&lt;p&gt;Qt provides single-source portability across all major desktop operating systems."
+          }
+        ]
+      },
+      "A09-LoggingMonitoringFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A10-SSRF": {
+        "count": 0,
+        "findings": []
+      }
+    }
+  },
+  "owasp_llm_top10": {
+    "total_findings": 26,
+    "files_with_findings": 26,
+    "severity": {
+      "high": 0,
+      "medium": 26,
+      "low": 0
+    },
+    "categories": {
+      "LLM01-PromptInjection": {
+        "count": 26,
+        "findings": [
+          {
+            "severity": "medium",
+            "file": "src/app/seamly2d/core/vcmdexport.cpp",
+            "line": 469,
+            "cwe": "CWE-1336",
+            "snippet": "if (!diag.SelectTemplate(OptPaperSize()))"
+          },
+          {
+            "severity": "medium",
+            "file": "src/app/seamly2d/dialogs/dialogpatternproperties.cpp",
+            "line": 643,
+            "cwe": "CWE-1336",
+            "snippet": "doc->setPatternLabelTemplate(templateLines);"
+          },
+          {
+            "severity": "medium",
+            "file": "src/app/seamly2d/dialogs/layoutsettings_dialog.cpp",
+            "line": 369,
+            "cwe": "CWE-1336",
+            "snippet": "SheetSize(Template());"
+          },
+          {
+            "severity": "medium",
+            "file": "src/app/seamly2d/dialogs/layoutsettings_dialog.h",
+            "line": 122,
+            "cwe": "CWE-1336",
+            "snippet": "bool              SelectTemplate(const PaperSizeFormat& id);"
+          },
+          {
+            "severity": "medium",
+            "file": "src/app/seamly2d/dialogs/configpages/preferencespathpage.cpp",
+            "line": 101,
+            "cwe": "CWE-1336",
+            "snippet": "settings->SetPathLabelTemplate(ui->pathTable->item(5, 1)->text());"
+          },
+          {
+            "severity": "medium",
+            "file": "src/app/seamly2d/dialogs/configpages/preferencespatternpage.cpp",
+            "line": 257,
+            "cwe": "CWE-1336",
+            "snippet": "void PreferencesPatternPage::setDefaultTemplate()"
+          },
+          {
+            "severity": "medium",
+            "file": "src/app/seamly2d/dialogs/configpages/preferencespatternpage.h",
+            "line": 82,
+            "cwe": "CWE-1336",
+            "snippet": "void          setDefaultTemplate();"
+          },
+          {
+            "severity": "medium",
+            "file": "src/app/seamly2d/xml/vpattern.cpp",
+            "line": 1056,
+            "cwe": "CWE-1336",
+            "snippet": "ppData.SetLabelTemplate(GetLabelTemplate(domElement));"
+          },
+          {
+            "severity": "medium",
+            "file": "src/app/seamlyme/tmainwindow.cpp",
+            "line": 494,
+            "cwe": "CWE-1336",
+            "snippet": "void TMainWindow::OpenTemplate()"
+          },
+          {
+            "severity": "medium",
+            "file": "src/app/seamlyme/tmainwindow.h",
+            "line": 113,
+            "cwe": "CWE-1336",
+            "snippet": "void                OpenTemplate();"
+          },
+          {
+            "severity": "medium",
+            "file": "src/libs/ifc/xml/vabstractpattern.cpp",
+            "line": 1525,
+            "cwe": "CWE-1336",
+            "snippet": "void VAbstractPattern::setPatternLabelTemplate(const QVector<VLabelTemplateLine> &lines)"
+          },
+          {
+            "severity": "medium",
+            "file": "src/libs/ifc/xml/vabstractpattern.h",
+            "line": 229,
+            "cwe": "CWE-1336",
+            "snippet": "void                           setPatternLabelTemplate(const QVector<VLabelTemplateLine> &lines);"
+          },
+          {
+            "severity": "medium",
+            "file": "src/libs/ifc/xml/vdomdocument.cpp",
+            "line": 928,
+            "cwe": "CWE-1336",
+            "snippet": "QVector<VLabelTemplateLine> VDomDocument::GetLabelTemplate(const QDomElement &element) const"
+          },
+          {
+            "severity": "medium",
+            "file": "src/libs/ifc/xml/vdomdocument.h",
+            "line": 155,
+            "cwe": "CWE-1336",
+            "snippet": "QVector<VLabelTemplateLine> GetLabelTemplate(const QDomElement &element) const;"
+          },
+          {
+            "severity": "medium",
+            "file": "src/libs/vformat/vlabeltemplate.cpp",
+            "line": 59,
+            "cwe": "CWE-1336",
+            "snippet": "VLabelTemplate::VLabelTemplate()"
+          },
+          {
+            "severity": "medium",
+            "file": "src/libs/vformat/vlabeltemplate.h",
+            "line": 60,
+            "cwe": "CWE-1336",
+            "snippet": "VLabelTemplate();"
+          },
+          {
+            "severity": "medium",
+            "file": "src/libs/vlayout/vtextmanager.cpp",
+            "line": 358,
+            "cwe": "CWE-1336",
+            "snippet": "QVector<VLabelTemplateLine> lines = data.GetLabelTemplate();"
+          },
+          {
+            "severity": "medium",
+            "file": "src/libs/vmisc/vcommonsettings.cpp",
+            "line": 529,
+            "cwe": "CWE-1336",
+            "snippet": "void VCommonSettings::SetPathLabelTemplate(const QString &text)"
+          },
+          {
+            "severity": "medium",
+            "file": "src/libs/vmisc/vcommonsettings.h",
+            "line": 103,
+            "cwe": "CWE-1336",
+            "snippet": "void                 SetPathLabelTemplate(const QString &value);"
+          },
+          {
+            "severity": "medium",
+            "file": "src/libs/vpatterndb/floatItemData/vpiecelabeldata.cpp",
+            "line": 176,
+            "cwe": "CWE-1336",
+            "snippet": "QVector<VLabelTemplateLine> VPieceLabelData::GetLabelTemplate() const"
+          },
+          {
+            "severity": "medium",
+            "file": "src/libs/vpatterndb/floatItemData/vpiecelabeldata.h",
+            "line": 86,
+            "cwe": "CWE-1336",
+            "snippet": "QVector<VLabelTemplateLine> GetLabelTemplate() const;"
+          },
+          {
+            "severity": "medium",
+            "file": "src/libs/vtools/dialogs/support/editlabeltemplate_dialog.cpp",
+            "line": 290,
+            "cwe": "CWE-1336",
+            "snippet": "void EditLabelTemplateDialog::NewTemplate()"
+          },
+          {
+            "severity": "medium",
+            "file": "src/libs/vtools/dialogs/support/editlabeltemplate_dialog.h",
+            "line": 78,
+            "cwe": "CWE-1336",
+            "snippet": "QVector<VLabelTemplateLine> GetTemplate() const;"
+          },
+          {
+            "severity": "medium",
+            "file": "src/libs/vtools/dialogs/tools/piece/pattern_piece_dialog.cpp",
+            "line": 328,
+            "cwe": "CWE-1336",
+            "snippet": "m_pieceLabelLines = m_oldData.GetLabelTemplate();"
+          },
+          {
+            "severity": "medium",
+            "file": "src/libs/vtools/tools/pattern_piece_tool.cpp",
+            "line": 393,
+            "cwe": "CWE-1336",
+            "snippet": "doc->SetLabelTemplate(domData, data.GetLabelTemplate());"
+          }
+        ]
+      },
+      "LLM02-SensitiveInfoDisclosure": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM03-SupplyChain": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM04-DataPoisoning": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM05-ImproperOutputHandling": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM06-ExcessiveAgency": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM07-SystemPromptLeak": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM08-VectorEmbeddingWeaknesses": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM09-Misinformation": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM10-UnboundedConsumption": {
+        "count": 0,
+        "findings": []
+      }
+    }
+  },
+  "sbom": {
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.5",
+    "serialNumber": "urn:uuid:242a2196-726f-52bd-8541-b9816ba051b8",
+    "version": 1,
+    "metadata": {
+      "timestamp": "2026-10-05T15:27:50Z",
+      "component": {
+        "type": "application",
+        "name": "SEAMLY2D",
+        "version": "0627ac315f7b",
+        "bom-ref": "pkg:generic/anticloud/SEAMLY2D@0627ac315f7b",
+        "purl": "pkg:generic/anticloud/SEAMLY2D@0627ac315f7b",
+        "licenses": [
+          {
+            "license": {
+              "id": "GPL-3.0"
+            }
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "anticloud:source-commit",
+          "value": "0627ac315f7b9aae6109e0961a59b98852e7aae0"
+        },
+        {
+          "name": "anticloud:source-url",
+          "value": "https://github.com/FashionFreedom/Seamly2D.git"
+        },
+        {
+          "name": "anticloud:tier",
+          "value": "tier-agent"
+        }
+      ]
+    },
+    "components": []
+  },
+  "elapsed_seconds": 65.01
+}

@@ -1,0 +1,38 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:242a2196-726f-52bd-8541-b9816ba051b8",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-05T15:27:50Z",
+    "component": {
+      "type": "application",
+      "name": "SEAMLY2D",
+      "version": "0627ac315f7b",
+      "bom-ref": "pkg:generic/anticloud/SEAMLY2D@0627ac315f7b",
+      "purl": "pkg:generic/anticloud/SEAMLY2D@0627ac315f7b",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-3.0"
+          }
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "anticloud:source-commit",
+        "value": "0627ac315f7b9aae6109e0961a59b98852e7aae0"
+      },
+      {
+        "name": "anticloud:source-url",
+        "value": "https://github.com/FashionFreedom/Seamly2D.git"
+      },
+      {
+        "name": "anticloud:tier",
+        "value": "tier-agent"
+      }
+    ]
+  },
+  "components": []
+}
